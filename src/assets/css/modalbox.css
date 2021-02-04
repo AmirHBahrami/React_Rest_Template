@@ -1,0 +1,12 @@
+.modal-box-div{
+
+  position:absolute;
+  z-index: 1000;
+  background-color: black;;
+  color:white;
+  opacity: .8;
+  padding:.2vw .7vw;
+
+  border-radius: 0.5vw;
+
+}

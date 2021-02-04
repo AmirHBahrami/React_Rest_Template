@@ -1,0 +1,17 @@
+:root{
+
+ --c:#AD4328;
+ --c1:#B65741;
+ 
+}
+
+.elevated-light{
+
+  box-shadow: 
+    0 0 4px 0 rgba(0, 0, 0, 0.08),
+    0 2px 4px 0 rgba(0, 0, 0, 0.12)
+  ;
+
+}
+
+

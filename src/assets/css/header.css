@@ -1,0 +1,60 @@
+header{
+
+  display:flex;
+  flex-direction: row;
+  width:100%;
+  justify-content: space-between;
+  font-size:1.25vw;
+  margin-top: 0;
+
+}
+
+.header-logo-div,.login-div{
+
+  display: flex;
+  flex-direction: row;
+}
+
+.header-menu-div{
+  margin-left:5vw;
+  align-self: center;
+}
+
+.header-logo-div{
+  align-content: center;
+  align-items: center;
+  margin-left:5vw;
+}
+
+.header-logo-div>p{
+
+  margin-left:3vw;
+  font-size:1.25vw;
+}
+
+.login-div{
+  margin-right: 5vw;
+  margin-top: .5vw;
+  margin-bottom: .5vw;
+  justify-content: space-between;
+}
+
+.login-img{
+  align-self: flex-start;
+}
+
+.login-div>a{ 
+  color:inherit;
+  text-decoration: none;
+  align-self: center;
+  padding:.25vw;
+  margin-right: 1vw;
+  border:1px solid black;
+  border-radius: .5vw;
+  font-size:1vw;
+}
+
+.login-div>a:hover{
+  background:black;
+  color:white;
+}

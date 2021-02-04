@@ -1,24 +1,24 @@
-import logo from './logo.svg';
+import React,{useEffect} from 'react';
+import {BrowserRouter as Router} from 'react-router-dom';
+
+import Header from './components/Header';
+import Main from './components/Main';
+import menuActivatorH from './hooks/menu-activator';
+import userH from './hooks/user-hook';
+
 import './App.css';
+import './assets/css/common.css';
 
 function App() {
+
+  const userHook=userH();
+  const menuActivatorHook=menuActivatorH();  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Header userHook={userHook} menuActivatorHook={menuActivatorHook}/>
+      <Main userHook={userHook} menuActivatorHook={menuActivatorHook}/>
+    </Router>
   );
 }
 
