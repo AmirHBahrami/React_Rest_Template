@@ -1,8 +1,8 @@
 import React,{useState} from 'react';
+import {useHistory} from 'react-router-dom';
 import TextModal from '../TextModal/';
 
-import logoImg from '../../assets/img/farv.png';
-
+import logoImg from '../../assets/img/icons/Faravahar-Gold.svg';
 
 // why a component in itself:
 // if you hold your mouse on the log, a modal text shows up
@@ -10,6 +10,7 @@ import logoImg from '../../assets/img/farv.png';
 export default function(props){
 
   const [modalText,setModalText]=useState(null);
+  const history=useHistory();
   let modalTimeout=null;
 
   return(
@@ -19,7 +20,7 @@ export default function(props){
           onMouseEnter={(e)=>{
             modalTimeout=setTimeout(()=>{
               setModalText(
-                <TextModal event={e} 
+                <TextModal event={e}
                   text='Farvahar is the Symbol of Zoroastrianism and my all-time favourite!'/>
                 );
             },500);
@@ -28,11 +29,15 @@ export default function(props){
             clearTimeout(modalTimeout); // no need to clear it , for it causes re-render
             setModalText(null);
           }}
-        > 
+          onClick={()=>{
+            history.replace('/');
+          }}
+        >
           <img
             src={logoImg}
             width='100px'
             height='40px'
+            alt="https://commons.wikimedia.org/wiki/File:Faravahar-Gold.svg"
             />
         </a>
         {modalText}

@@ -5,13 +5,14 @@
 
 @keyframes show{
   from{ 
-    
-    display:none;
-    width:0;
+    left:-400px;
+    /*display:none;*/
+    /*width:0;*/
   }
   to{
-    display:block;
-    width:var(--side-nav-width);
+    left:0;
+    /*display:block;
+    width:var(--side-nav-width);*/
   }
 
 }
@@ -22,44 +23,26 @@ if you're making a counter animation
 you should name it de[fuckall]
 */
 @keyframes deshow{
+
   from{
-    display: block;
-    width:var(--side-nav-width);
+    background-color: black;
+    left:0;
   }
+
   to{
-    width:0;
-    display:none;
+    left:-400px;
   }
 }
 
 .side-nav{
-  display:none;
-  position:absolute;
   z-index: 1000;
-
-  animation:deshow;
-  animation-duration: 0.5s;
-  
-}
-
-.side-nav-pre-deactive{
-
-  display:block;
-  width:var(--side-nav-width);
-}
-
-.side-nav-deactive{
-
-  width:0;
-  display:none;
-
-  animation:deshow;
-  animation-duration: 0.5s;
-
 }
 
 .side-nav-active{
   
+  position:absolute;
+  left:0;
+
   display:block;
   width:var(--side-nav-width);
   
@@ -68,9 +51,20 @@ you should name it de[fuckall]
   
   color:white; 
   background-color: rgba(0,0,0,0.8);
-  height:92%;
+  height:90.5%;
   
 }
+
+.side-nav-deactive{
+
+  animation:deshow;
+  animation-duration: 1s;
+
+  position:absolute;
+  left:-400px;
+  
+}
+
 
 .side-nav-ul{
   margin:0;

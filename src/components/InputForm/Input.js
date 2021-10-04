@@ -12,7 +12,7 @@ export default function(props){
     <input 
       onInput={onInputFunc} // will be passed an 'event' object
       type={type}
-      class={className?`${className}-${type}`:type}
+      class={className?`${className}-${type}-input`:type+'-input'}
       value={defaultVal?defaultVal:null}
       name={name}
     />

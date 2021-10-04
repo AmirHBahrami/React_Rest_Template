@@ -13,7 +13,7 @@ export default function (props){
   const {user,setUser}=props.userHook;
 
   return(
-    <div class='login-div'>
+    <div class='header-login-div'>
       {user 
         &&
           <a href='#' onClick={()=>logout(setUser)}>logout</a>
@@ -21,7 +21,7 @@ export default function (props){
           <Link to='/login'>login</Link>
       }
       <img 
-        class='login-img' 
+        class='header-login-img' 
         src={user && user.img? user.img:defaultUserImg} 
         alt=" Icons made by Freepik from 'https://www.flaticon.com/'"
         width='40px'

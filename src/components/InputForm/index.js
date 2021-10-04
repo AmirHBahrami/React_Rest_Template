@@ -1,6 +1,5 @@
 import React from 'react';
 import LabeledInput from './LabeledInput';
-import TextInput from './TextInput';
 
 // note that only text input, checkbox, and radio are supported at the time being,
 // if you needed to add new types of input, add it as a new element in the local 
@@ -10,7 +9,7 @@ import TextInput from './TextInput';
 // dynamic setState with function : useState({}) >> oldState=state; setState({...oldState,[name]:val});
 export default class extends React.Component{
   
-  state={};
+  state={args:{}};
 
   setValue=(e)=>{
 
@@ -21,10 +20,12 @@ export default class extends React.Component{
     else 
       value=e.target.value
 
+    let newArgs={...this.state.args};
+    newArgs[e.target.name]=value;
+
     this.setState({
-      [e.target.name]:value
+      args:newArgs
     });
-    console.log(value)
   }
 
   render(){
@@ -37,7 +38,7 @@ export default class extends React.Component{
         class={className?className+'-form':'form'}
         onSubmit={(e)=>{
           e.preventDefault();
-          onSubmitFunc(this.state); // event though it's a bit bit...
+          onSubmitFunc(this.state.args); // event though it's a bit bit...
         }}
       >
         {inputsList.map(i=>{

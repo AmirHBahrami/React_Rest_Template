@@ -1,11 +1,14 @@
 import React,{useState} from 'react';
-import {Link} from 'react-router-dom';
+import {Link,useRouteMatch} from 'react-router-dom';
+ 
+export default function ({to,label}){
 
-export default function (props){
+  let active=useRouteMatch(to);
+  //console.log(to,active);
 
   return (
-    <div class={props.active?'side-elem-active':'side-elem'}>
-      <Link to={props.to}>{props.label || 'link'}</Link>
+    <div class={active?'side-elem-active':'side-elem'}>
+      <Link to={to}>{label || 'link'}</Link>
     </div>
   )
 };
