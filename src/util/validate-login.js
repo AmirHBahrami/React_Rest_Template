@@ -1,4 +1,4 @@
-import user_example from '../assets/img/user/user_example.jpg';// only for testing purposes
+import user_example from '../assets/img/user/example_user.png';// only for testing purposes
 
 
 // could also be {username,password}

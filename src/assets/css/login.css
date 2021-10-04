@@ -5,8 +5,8 @@ main{
 }
 
 @keyframes showlogin{
-  
-  from{ 
+
+  from{
     margin-top:-400vh;
   }
   to{
@@ -34,7 +34,7 @@ main{
 }
 
 .login-form{
-  
+
   display:flex;
   flex-direction: column;
   justify-content: space-between;
@@ -94,5 +94,21 @@ main{
 
   color:red;
   font-style: italic;
-  
+
+}
+
+.login-submit{
+  color:inherit;
+  text-decoration: none;
+  align-self: flex-start;
+  padding:.25vw;
+  margin-right: 1vw;
+  border:1px solid black;
+  border-radius: .5vw;
+  font-size:1vw;
+}
+
+.login-submit:hover{
+  background:black;
+  color:white;
 }

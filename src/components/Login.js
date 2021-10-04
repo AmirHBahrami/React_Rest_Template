@@ -30,7 +30,7 @@ export default function(props){
     { error &&(
       <p class='login-error-p'>{error}</p>
     )}
-    <InputForm 
+    <InputForm
       className='login'
       inputsList={args}
       onSubmitFunc={({username,password,keepSignedIn})=>{
@@ -40,7 +40,7 @@ export default function(props){
           props.setUser(user);
           if(keepSignedIn)
             writeUserToLocalStorage(user);
-          console.log('logged in.');
+          // console.log('logged in.');
           history.push('/welcome');
         }
         else
